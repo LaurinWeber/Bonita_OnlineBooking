@@ -1,0 +1,92 @@
+{
+  "designerVersion" : "1.10.54",
+  "id" : "claimsList",
+  "name" : "claimsList",
+  "lastUpdate" : 1587998877428,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "headers" : {
+            "type" : "constant",
+            "value" : [
+              "Description",
+              "Answer",
+              "Satisfaction level"
+            ]
+          },
+          "content" : {
+            "type" : "expression",
+            "value" : "claims"
+          },
+          "columnsKey" : {
+            "type" : "constant",
+            "value" : [
+              "description",
+              "answer",
+              "satisfactionLevel"
+            ]
+          },
+          "selectedRow" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "striped" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "condensed" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "bordered" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "2423103e-1705-466b-bef1-4916f9a70443",
+        "hasValidationError" : false,
+        "id" : "pbTable"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "d6c3c5d8-5a88-4fce-813d-e1ccf7134706",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "claims" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"find [com.company.model.Claim]\",\"businessObjectName\":\"Claim\",\"query\":{\"name\":\"find\",\"displayName\":\"find\"},\"id\":\"com_company_model_Claim\",\"qualifiedName\":\"com.company.model.Claim\",\"filters\":[],\"pagination\":{\"p\":0,\"c\":10}}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "51efd7cd-58f2-48a8-a13b-9b7fce96db8e",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}
