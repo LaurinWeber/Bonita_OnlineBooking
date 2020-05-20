@@ -1,8 +1,8 @@
 {
   "designerVersion" : "1.10.54",
-  "id" : "ModifyDate",
-  "name" : "ModifyDate",
-  "lastUpdate" : 1589477481494,
+  "id" : "InputPay",
+  "name" : "InputPay",
+  "lastUpdate" : 1589985658601,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "43a21ba7-6e13-4397-8753-c62f0982a082",
+        "reference" : "7e3073a1-d80d-469e-a2e7-17038687df19",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -66,7 +66,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "647df1fe-9f60-4b2d-ac04-c374fc28dad9",
+              "reference" : "2569c0de-96ab-4348-b2d8-141894f0fa43",
               "hasValidationError" : false,
               "id" : "pbTitle"
             }
@@ -122,7 +122,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "1cbd5d0f-7b2e-4e86-93cf-b3480777a49e",
+              "reference" : "a854f036-3243-4f3f-b13d-d0123f5191e0",
               "hasValidationError" : false,
               "id" : "pbText"
             }
@@ -137,7 +137,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "d85761bd-c01f-47d7-ae31-42bf369bdfa7",
+        "reference" : "d6bd605a-40d8-4df6-a64a-ed143df1713c",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -146,7 +146,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "84b22f70-903c-468e-bc1e-2f69854525b2",
+          "reference" : "a451c9e8-a88e-4531-ae68-5f120e76c835",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -201,7 +201,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "e0e13742-50d0-427f-96b6-736f91ac4766",
+                "reference" : "2479cd7c-eab9-4f0a-ace9-e6d0d41eec11",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -214,7 +214,8 @@
                 },
                 "propertyValues" : {
                   "repeatedCollection" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : ""
                   },
                   "labelHidden" : {
                     "type" : "constant",
@@ -251,7 +252,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "dc05cff5-9dd8-4beb-85e4-cf57572316e5",
+                "reference" : "0447f1d9-9d32-4da9-b194-1e274c3ed773",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -262,13 +263,17 @@
                         "xs" : 12
                       },
                       "propertyValues" : {
-                        "hidden" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "dateFormat" : {
-                          "type" : "constant",
-                          "value" : "MM/dd/yyyy"
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!_TicketOrder.TicketArea"
                         },
                         "cssClasses" : {
                           "type" : "constant",
@@ -276,11 +281,7 @@
                         },
                         "widgetId" : {
                           "type" : "constant",
-                          "value" : "pbDatePicker"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
+                          "value" : "pbText"
                         },
                         "readOnly" : {
                           "type" : "constant",
@@ -288,34 +289,11 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Booking Date"
+                          "value" : "Ticket Area"
                         },
-                        "type" : {
-                          "type" : "constant"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "todayLabel" : {
-                          "type" : "constant",
-                          "value" : "Today"
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "showToday" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Enter a date (mm/dd/yyyy)"
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{_TicketOrder.TicketArea}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -323,20 +301,130 @@
                         },
                         "class" : {
                           "type" : "constant",
-                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.DatePickerWidget"
+                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TextWidget"
                         },
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "_TicketOrder.BookingDate"
                         }
                       },
-                      "reference" : "8f558456-053a-45a3-b511-bc8a9f1e2727",
+                      "reference" : "64533d47-3912-458b-b1bf-6778c078e496",
                       "hasValidationError" : false,
-                      "id" : "pbDatePicker"
+                      "id" : "pbText"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!_TicketOrder.TicketPrice"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "widgetId" : {
+                          "type" : "constant",
+                          "value" : "pbText"
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Ticket Price"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{_TicketOrder.TicketPrice}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "class" : {
+                          "type" : "constant",
+                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TextWidget"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "39520c39-f12b-4fed-b43c-bfa08fd81b47",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!_TicketOrder.TicketDateValidity"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "widgetId" : {
+                          "type" : "constant",
+                          "value" : "pbText"
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Ticket Date Validity"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{_TicketOrder.TicketDateValidity|uiDate}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "class" : {
+                          "type" : "constant",
+                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TextWidget"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "7c8e3432-e987-4e3c-9361-2e69ec1639eb",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
                     }
                   ]
                 ]
@@ -346,7 +434,94 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12
+                  "xs" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "disabled" : {
+                    "type" : "expression",
+                    "value" : "$form.$invalid"
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Cancel"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "right"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "danger"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Submit task"
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataToSend" : {
+                    "type" : "expression",
+                    "value" : "formOutput"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "dataFromError" : {
+                    "type" : "variable",
+                    "value" : "formOutput._submitError"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation",
+                    "value" : "/bonita"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant",
+                    "value" : "Last"
+                  },
+                  "valueToAdd" : {
+                    "type" : "constant"
+                  },
+                  "removeItem" : {
+                    "type" : "variable"
+                  }
+                },
+                "reference" : "c0262bdc-cebf-40cc-8f04-e3c41ec8f711",
+                "hasValidationError" : false,
+                "id" : "pbButton"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 6
                 },
                 "propertyValues" : {
                   "removeItem" : {
@@ -374,7 +549,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Pay"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -411,7 +586,7 @@
                   },
                   "alignment" : {
                     "type" : "constant",
-                    "value" : "center"
+                    "value" : "left"
                   },
                   "class" : {
                     "type" : "constant",
@@ -420,9 +595,32 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
-                "reference" : "5d1094a7-5a5b-47ff-a76f-736a16c6d373",
+                "reference" : "9d00a23c-3869-4f4c-8b29-69ebb9b7a538",
                 "hasValidationError" : false,
                 "id" : "pbButton"
               }
@@ -482,7 +680,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "20adb30c-94f1-4ca0-84bc-f5a9ad83b471",
+                "reference" : "26cb51b4-7b1f-4ecd-a3ed-e7a826d97290",
                 "hasValidationError" : false,
                 "id" : "pbText"
               }
@@ -494,7 +692,7 @@
   ],
   "assets" : [
     {
-      "id" : "5886cc00-d5d3-4327-a099-ea611def637b",
+      "id" : "1d654c8d-ce0e-4568-9b04-13c6289c18d5",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -539,7 +737,7 @@
         "\treturn {",
         "\t\t//map _TicketOrder variable to expected task contract input",
         "\t\t_TicketOrderInput: {",
-        "\t\t\tBookingDate: $data._TicketOrder.BookingDate !== undefined ? $data._TicketOrder.BookingDate : null",
+        "\t\t\tFK_cardKey: $data._TicketOrder.FK_cardKey !== undefined ? $data._TicketOrder.FK_cardKey : null",
         "\t\t}",
         "\t}",
         "}"
@@ -562,7 +760,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "11dc4c25-bb21-47d1-80f7-5df94ad6be30",
+  "uuid" : "569d6d52-ba3e-4194-abfa-50bae2a35bcb",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

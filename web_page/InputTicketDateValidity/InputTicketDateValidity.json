@@ -1,8 +1,8 @@
 {
   "designerVersion" : "1.10.54",
-  "id" : "InputDate",
-  "name" : "InputDate",
-  "lastUpdate" : 1589468223462,
+  "id" : "InputTicketDateValidity",
+  "name" : "InputTicketDateValidity",
+  "lastUpdate" : 1589967425642,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "2e325aff-2b6f-4b2f-844c-7c0ea7ab9ec3",
+        "reference" : "4f673f1b-ee4b-4ad5-b20b-9553e7c6c403",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -20,7 +20,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "1d13974c-b6c0-4350-9d73-b486aa282c27",
+          "reference" : "0671660c-450b-4d6a-ab4d-5cd3cd50ff08",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -75,7 +75,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "6219e3fd-b9dc-44c3-be47-e22e41d2ee39",
+                "reference" : "5d034162-a2df-4ea5-acb5-1fbae0fa8b64",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -125,7 +125,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "d0348ee1-ff6e-460a-98be-6c9aec32c15b",
+                "reference" : "5820b12c-e925-40c3-a523-43ad683d918c",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -162,7 +162,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Booking Date"
+                          "value" : "Ticket Date Validity"
                         },
                         "type" : {
                           "type" : "constant"
@@ -205,10 +205,10 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput._TicketOrderInput.BookingDate"
+                          "value" : "formInput._TicketOrderInput.TicketDateValidity"
                         }
                       },
-                      "reference" : "fdc58592-7313-4181-8cf8-517720268631",
+                      "reference" : "b71e12a9-8c6c-453b-ba4f-421e1e7883d4",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker"
                     }
@@ -296,7 +296,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "0170e2ad-cf84-4da0-a941-8f84e2d864f1",
+                "reference" : "b4f9b516-53eb-4c19-8d26-84359732f1aa",
                 "hasValidationError" : false,
                 "id" : "pbButton"
               }
@@ -356,7 +356,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "644e5225-dccf-48f8-b442-c6b583107fd8",
+                "reference" : "3f3b05cd-364b-4d06-b5ac-a4a00e3f58a9",
                 "hasValidationError" : false,
                 "id" : "pbText"
               }
@@ -368,7 +368,7 @@
   ],
   "assets" : [
     {
-      "id" : "a60c346a-24c0-47e8-92c5-5078a1211a08",
+      "id" : "e2fdc360-ce93-4cb9-9a6b-847c21d0cf9e",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -412,7 +412,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "0db3834e-379e-44c4-ba24-8ecec2489677",
+  "uuid" : "0edef890-a957-4f5e-9d19-56b06096b377",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

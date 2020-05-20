@@ -11,37 +11,51 @@
             <queries/>
             <indexes/>
         </businessObject>
-        <businessObject qualifiedName="com.company.onlinebooking.Customer">
-            <fields>
-                <field type="STRING" length="255" name="firstName" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="lastName" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
         <businessObject qualifiedName="com.company.onlinebooking.TicketCard">
             <fields>
-                <field type="LONG" length="255" name="cardId" nullable="true" collection="false"/>
                 <field type="STRING" length="32" name="cardKey" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="cardOwnerFirstName" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="cardOwnerLastName" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="cardCategory" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="cardDateValidity" nullable="true" collection="false"/>
             </fields>
-            <uniqueConstraints/>
+            <uniqueConstraints>
+                <uniqueConstraint name="UNIQUE_CONSTRAINT_2">
+                    <fieldNames>
+                        <fieldName>cardKey</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
             <queries/>
-            <indexes/>
+            <indexes>
+                <index name="INDEX_2">
+                    <fieldNames>
+                        <fieldName>cardKey</fieldName>
+                    </fieldNames>
+                </index>
+            </indexes>
         </businessObject>
         <businessObject qualifiedName="com.company.onlinebooking.TicketOrder">
             <fields>
-                <field type="STRING" length="255" name="Category" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="Price" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="BookingDate" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="TicketArea" nullable="true" collection="false"/>
+                <field type="FLOAT" length="255" name="TicketPrice" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="TicketDateValidity" nullable="true" collection="false"/>
+                <field type="STRING" length="32" name="FK_cardKey" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="TicketStatus" nullable="true" collection="false"/>
             </fields>
-            <uniqueConstraints/>
+            <uniqueConstraints>
+                <uniqueConstraint name="UNIQUE_CONSTRAINT_1">
+                    <fieldNames>
+                        <fieldName>FK_cardKey</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
             <queries/>
-            <indexes/>
+            <indexes>
+                <index name="INDEX_1">
+                    <fieldNames>
+                        <fieldName>FK_cardKey</fieldName>
+                    </fieldNames>
+                </index>
+            </indexes>
         </businessObject>
     </businessObjects>
 </businessObjectModel>

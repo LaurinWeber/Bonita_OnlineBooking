@@ -1,8 +1,8 @@
 {
   "designerVersion" : "1.10.54",
-  "id" : "InputCustomer",
-  "name" : "InputCustomer",
-  "lastUpdate" : 1589477627001,
+  "id" : "InputTicketArea",
+  "name" : "InputTicketArea",
+  "lastUpdate" : 1589974462427,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "275b7bd2-6a65-49af-a401-cb40850a430b",
+        "reference" : "e01352bb-2227-49d2-abb0-b82403881481",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -66,7 +66,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "a9927776-b0a4-4443-93b4-2c416e962873",
+              "reference" : "22fe6056-39fd-4e72-b818-827970a839cd",
               "hasValidationError" : false,
               "id" : "pbTitle"
             }
@@ -122,7 +122,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "046c4d76-a011-4770-a7fd-437af84af085",
+              "reference" : "8661f44c-43ba-40dd-a100-69bccf9ae9e7",
               "hasValidationError" : false,
               "id" : "pbText"
             }
@@ -137,7 +137,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "ebbc2150-5ca4-482f-9284-73c5dfc33523",
+        "reference" : "00d778d2-48e6-4b54-8ce5-81d0c8d895a5",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -146,7 +146,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "8f6052eb-80ac-4f16-b159-e50ae67638fb",
+          "reference" : "1dbdc865-b220-4212-b50b-b81d867108d4",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -186,7 +186,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "_Customer"
+                    "value" : "_Ticket Order"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -201,7 +201,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "77206509-22d5-4949-a62f-ebeb3f9f7d9b",
+                "reference" : "d534985b-d9a2-4afd-ad8a-4464142f54a1",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -214,7 +214,8 @@
                 },
                 "propertyValues" : {
                   "repeatedCollection" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : ""
                   },
                   "labelHidden" : {
                     "type" : "constant",
@@ -251,7 +252,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "f03aa6a9-3f60-4fc0-a17d-62356d787f51",
+                "reference" : "d26e49d4-7651-4b03-b4ff-2263f9e4afd4",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -262,33 +263,17 @@
                         "xs" : 12
                       },
                       "propertyValues" : {
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
-                        "widgetId" : {
-                          "type" : "constant",
-                          "value" : "pbInput"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
+                        "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "First Name"
-                        },
-                        "type" : {
+                        "disabled" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : false
                         },
                         "required" : {
                           "type" : "constant",
@@ -298,105 +283,47 @@
                           "type" : "constant",
                           "value" : false
                         },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Select"
+                        },
                         "labelPosition" : {
                           "type" : "constant",
                           "value" : "top"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "class" : {
-                          "type" : "constant",
-                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput._CustomerInput.firstName"
-                        }
-                      },
-                      "reference" : "83bc6566-a450-4a58-9990-6987d9cfbd45",
-                      "hasValidationError" : false,
-                      "id" : "pbInput"
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12
-                      },
-                      "propertyValues" : {
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "widgetId" : {
-                          "type" : "constant",
-                          "value" : "pbInput"
                         },
                         "labelWidth" : {
                           "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Last Name"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
+                          "value" : 4
                         },
                         "placeholder" : {
-                          "type" : "constant"
+                          "type" : "interpolation",
+                          "value" : "Select an option"
                         },
-                        "alignment" : {
+                        "availableValues" : {
                           "type" : "constant",
-                          "value" : "left"
+                          "value" : [
+                            "ZERMATT",
+                            "VILLARS",
+                            "CHAMPERY",
+                            "MORGINS"
+                          ]
                         },
-                        "class" : {
+                        "displayedKey" : {
                           "type" : "constant",
-                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+                          "value" : ""
                         },
-                        "dimension" : {
+                        "returnedKey" : {
                           "type" : "constant",
-                          "value" : 12
+                          "value" : ""
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput._CustomerInput.lastName"
+                          "value" : "_TicketOrder.TicketArea"
                         }
                       },
-                      "reference" : "73b87361-0396-494f-aa6d-5b983ef78a7b",
+                      "reference" : "f639a463-e578-4e2d-8b89-80e7fff22193",
                       "hasValidationError" : false,
-                      "id" : "pbInput"
+                      "id" : "pbSelect"
                     }
                   ]
                 ]
@@ -482,7 +409,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "43e370ac-712d-4565-b676-30388cbe2268",
+                "reference" : "323090a7-5a01-45e0-bddb-a7bd7d9e9702",
                 "hasValidationError" : false,
                 "id" : "pbButton"
               }
@@ -542,7 +469,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "7799dba8-5f41-4bb5-9a92-4fa7683e2530",
+                "reference" : "baba896b-c619-4b12-b6e9-1dec05615de1",
                 "hasValidationError" : false,
                 "id" : "pbText"
               }
@@ -554,7 +481,7 @@
   ],
   "assets" : [
     {
-      "id" : "0b898f83-6105-4380-ba5a-c03159c87f9c",
+      "id" : "84e6f450-9fc2-4ae0-a2d6-fa0f53d44c8a",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -563,22 +490,17 @@
   ],
   "inactiveAssets" : [ ],
   "variables" : {
+    "_TicketOrder" : {
+      "type" : "url",
+      "value" : [
+        "../{{context._TicketOrder_ref.link}}"
+      ],
+      "exposed" : false
+    },
     "task" : {
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
-      ],
-      "exposed" : false
-    },
-    "formInput" : {
-      "type" : "json",
-      "value" : [
-        "{\r",
-        "  \"_CustomerInput\" : {\r",
-        "    \"firstName\" : \"\",\r",
-        "    \"lastName\" : \"\"\r",
-        "  }\r",
-        "}"
       ],
       "exposed" : false
     },
@@ -600,8 +522,13 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "return {",
-        "\t_CustomerInput: $data.formInput._CustomerInput",
+        "if( $data._TicketOrder ){",
+        "\treturn {",
+        "\t\t//map _TicketOrder variable to expected task contract input",
+        "\t\t_TicketOrderInput: {",
+        "\t\t\tTicketArea: $data._TicketOrder.TicketArea !== undefined ? $data._TicketOrder.TicketArea : null",
+        "\t\t}",
+        "\t}",
         "}"
       ],
       "exposed" : false
@@ -622,7 +549,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "3d0caf92-057e-44da-bdfe-f430e755087e",
+  "uuid" : "3da61171-b1a2-47fb-bfa0-1b779fc0715b",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
