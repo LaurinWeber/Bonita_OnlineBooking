@@ -1,8 +1,8 @@
 {
   "designerVersion" : "1.10.54",
-  "id" : "InputTicketCardOwner",
-  "name" : "InputTicketCardOwner",
-  "lastUpdate" : 1589967521133,
+  "id" : "InputOwnerData",
+  "name" : "InputOwnerData",
+  "lastUpdate" : 1590102906200,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "1506358a-24fa-40a2-b61a-fb72e3d7827c",
+        "reference" : "ad9b1e95-badb-4423-b960-07c97fe8636d",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -66,7 +66,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "7ea381ca-1649-4a8c-abaa-ef188c611224",
+              "reference" : "c0194a24-383e-4a7e-9f95-9bd9d3f8eb42",
               "hasValidationError" : false,
               "id" : "pbTitle"
             }
@@ -122,7 +122,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "e74cc808-b3a3-40f7-9214-edef6a75364a",
+              "reference" : "94c19c40-b9f6-4b3a-8725-a0a53a9e42d5",
               "hasValidationError" : false,
               "id" : "pbText"
             }
@@ -137,7 +137,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "cd5f99b7-33e5-41c3-8345-32d25b979b0c",
+        "reference" : "80572e04-918b-4274-86f1-42a66e5c24b8",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -146,7 +146,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "507d4ee0-831d-4eed-a84e-1b41a72fe59c",
+          "reference" : "a4e56850-98e1-4820-8719-446422c8699c",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -201,7 +201,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "27ce1bd2-e9ac-416a-ac56-d2b5514cc59d",
+                "reference" : "db1652f4-5776-43a4-b0f8-d5b044164dc7",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -251,7 +251,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "14c50453-3ec3-47cf-a3c1-62b05876140a",
+                "reference" : "4d1678a2-e32a-46f0-9f86-a2da5f8b1a7a",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -322,7 +322,7 @@
                           "value" : "_TicketCard.cardOwnerFirstName"
                         }
                       },
-                      "reference" : "e0b4e818-448c-479f-a063-2ba00be8767b",
+                      "reference" : "9a357b7b-03c6-4baf-bc08-061950f113e5",
                       "hasValidationError" : false,
                       "id" : "pbInput"
                     }
@@ -394,7 +394,295 @@
                           "value" : "_TicketCard.cardOwnerLastName"
                         }
                       },
-                      "reference" : "ca00f307-c6b5-4a36-b50f-58936c016661",
+                      "reference" : "8fc76354-981b-4724-abac-9102ced16da2",
+                      "hasValidationError" : false,
+                      "id" : "pbInput"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "widgetId" : {
+                          "type" : "constant",
+                          "value" : "pbInput"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Card Owner Street"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "class" : {
+                          "type" : "constant",
+                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "_TicketCard.cardOwnerStreet"
+                        }
+                      },
+                      "reference" : "3499f5dc-22f0-4edc-bd6f-3029502ef7c4",
+                      "hasValidationError" : false,
+                      "id" : "pbInput"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "widgetId" : {
+                          "type" : "constant",
+                          "value" : "pbInput"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Card Owner Zip Code"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "class" : {
+                          "type" : "constant",
+                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "_TicketCard.cardOwnerZipCode"
+                        }
+                      },
+                      "reference" : "f15a05c3-32be-401d-8284-57a1c17ff150",
+                      "hasValidationError" : false,
+                      "id" : "pbInput"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "widgetId" : {
+                          "type" : "constant",
+                          "value" : "pbInput"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Card Owner City"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "class" : {
+                          "type" : "constant",
+                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "_TicketCard.cardOwnerCity"
+                        }
+                      },
+                      "reference" : "46ded843-0d5c-4647-acbe-4545d56f423b",
+                      "hasValidationError" : false,
+                      "id" : "pbInput"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "widgetId" : {
+                          "type" : "constant",
+                          "value" : "pbInput"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Card Owner Email"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "class" : {
+                          "type" : "constant",
+                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "_TicketCard.cardOwnerEmail"
+                        }
+                      },
+                      "reference" : "bfeb2f62-bfc7-435d-a88b-d368493f2fc6",
                       "hasValidationError" : false,
                       "id" : "pbInput"
                     }
@@ -482,7 +770,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "26ac7bd5-5735-4ef5-a297-ba205891b45a",
+                "reference" : "b489c7b4-3005-4c2c-a90f-2ec8b8dd7e51",
                 "hasValidationError" : false,
                 "id" : "pbButton"
               }
@@ -542,7 +830,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "36945a2b-b158-44ce-8cd0-789b012fc8e9",
+                "reference" : "7398e985-3fed-4cba-a255-84b00637fc4d",
                 "hasValidationError" : false,
                 "id" : "pbText"
               }
@@ -554,7 +842,7 @@
   ],
   "assets" : [
     {
-      "id" : "85755698-dd37-4d6d-b7a5-5ab9973a3f96",
+      "id" : "a68e3bcd-29c8-4c6f-8c0d-d2f53d0988c7",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -593,7 +881,11 @@
         "\t\t//map _TicketCard variable to expected task contract input",
         "\t\t_TicketCardInput: {",
         "\t\t\tcardOwnerFirstName: $data._TicketCard.cardOwnerFirstName !== undefined ? $data._TicketCard.cardOwnerFirstName : null,",
-        "\t\t\tcardOwnerLastName: $data._TicketCard.cardOwnerLastName !== undefined ? $data._TicketCard.cardOwnerLastName : null",
+        "\t\t\tcardOwnerLastName: $data._TicketCard.cardOwnerLastName !== undefined ? $data._TicketCard.cardOwnerLastName : null,",
+        "\t\t\tcardOwnerStreet: $data._TicketCard.cardOwnerStreet !== undefined ? $data._TicketCard.cardOwnerStreet : null,",
+        "\t\t\tcardOwnerZipCode: $data._TicketCard.cardOwnerZipCode !== undefined ? $data._TicketCard.cardOwnerZipCode : null,",
+        "\t\t\tcardOwnerCity: $data._TicketCard.cardOwnerCity !== undefined ? $data._TicketCard.cardOwnerCity : null,",
+        "\t\t\tcardOwnerEmail: $data._TicketCard.cardOwnerEmail !== undefined ? $data._TicketCard.cardOwnerEmail : null",
         "\t\t}",
         "\t}",
         "}"
@@ -623,7 +915,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "c040c33f-47e4-4b00-a558-add2e876f538",
+  "uuid" : "bf526015-a270-44c5-a64c-720f2b750667",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

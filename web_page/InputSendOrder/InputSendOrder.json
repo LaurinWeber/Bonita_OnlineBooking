@@ -1,8 +1,8 @@
 {
   "designerVersion" : "1.10.54",
-  "id" : "InputPay",
-  "name" : "InputPay",
-  "lastUpdate" : 1590096628921,
+  "id" : "InputSendOrder",
+  "name" : "InputSendOrder",
+  "lastUpdate" : 1590102512282,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "1ad49d33-7e88-4388-abc3-4f972f4f5bc2",
+        "reference" : "5cd82fe4-1564-42e8-a3a1-a45b636c4af9",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -66,7 +66,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "39d26599-a66e-48db-8438-af49337f7cfe",
+              "reference" : "534e581e-bd13-42e7-a6ed-9076639c600d",
               "hasValidationError" : false,
               "id" : "pbTitle"
             }
@@ -122,7 +122,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "60b257a7-c786-4187-aa73-3fbee4470661",
+              "reference" : "6a2c8c72-9043-43dd-b057-86f3ebee2ca1",
               "hasValidationError" : false,
               "id" : "pbText"
             }
@@ -137,7 +137,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "b730254e-d479-45b4-9fbb-d85a78e75436",
+        "reference" : "e7f32891-458a-46a3-bfa6-bd6f284a9739",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -146,7 +146,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "92b3534f-bcb5-496f-a2ed-0bd04a44928a",
+          "reference" : "1a3465eb-75ad-42a3-aedf-fa26e7182f7f",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -186,7 +186,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "_Ticket Order"
+                    "value" : "_Ticket Card"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -201,7 +201,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "4f9b1673-e2c9-448e-b3dc-2de6b61fa7b3",
+                "reference" : "529d3740-f508-4688-8570-043db73a2fdc",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -252,7 +252,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "6732338b-7cf9-40fe-b0e4-8850a217394b",
+                "reference" : "80d213e1-ebfe-490c-b359-46af3bb6be97",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -273,7 +273,7 @@
                         },
                         "hidden" : {
                           "type" : "expression",
-                          "value" : "!_TicketOrder.TicketArea"
+                          "value" : "!_TicketCard.cardKey"
                         },
                         "cssClasses" : {
                           "type" : "constant",
@@ -289,11 +289,11 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ticket Area"
+                          "value" : "Card Key"
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{_TicketOrder.TicketArea}}"
+                          "value" : "{{_TicketCard.cardKey}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -308,7 +308,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "71bbb2ae-3518-4277-805d-6a5313d2265d",
+                      "reference" : "1174feab-52bf-4933-a175-bf69bd29286d",
                       "hasValidationError" : false,
                       "id" : "pbText"
                     }
@@ -330,7 +330,7 @@
                         },
                         "hidden" : {
                           "type" : "expression",
-                          "value" : "!_TicketOrder.TicketPrice"
+                          "value" : "!_TicketCard.cardOwnerFirstName"
                         },
                         "cssClasses" : {
                           "type" : "constant",
@@ -346,11 +346,11 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ticket Price"
+                          "value" : "Card Owner First Name"
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{_TicketOrder.TicketPrice}}"
+                          "value" : "{{_TicketCard.cardOwnerFirstName}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -365,7 +365,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "6c4f54e0-adf4-464d-93a8-ad1fa1285b76",
+                      "reference" : "99a917e4-0b74-4314-af90-e7b1cf944da1",
                       "hasValidationError" : false,
                       "id" : "pbText"
                     }
@@ -387,7 +387,7 @@
                         },
                         "hidden" : {
                           "type" : "expression",
-                          "value" : "!_TicketOrder.TicketDateValidity"
+                          "value" : "!_TicketCard.cardOwnerLastName"
                         },
                         "cssClasses" : {
                           "type" : "constant",
@@ -403,11 +403,11 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ticket Date Validity"
+                          "value" : "Card Owner Last Name"
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{_TicketOrder.TicketDateValidity|uiDate}}"
+                          "value" : "{{_TicketCard.cardOwnerLastName}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -422,7 +422,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "f16e3799-e78d-4187-b65f-057829c9a03b",
+                      "reference" : "1b6cf8e1-7277-4080-9274-1b95eba4605c",
                       "hasValidationError" : false,
                       "id" : "pbText"
                     }
@@ -434,52 +434,44 @@
                         "xs" : 12
                       },
                       "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!_TicketOrder.TicketStatus"
-                        },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
-                        "widgetId" : {
-                          "type" : "constant",
-                          "value" : "pbText"
-                        },
-                        "readOnly" : {
+                        "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ticket Status"
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{_TicketOrder.TicketStatus}}"
+                          "value" : "<center><strong>I confirm that I have sent the card (number mentioned above)<br> to the person mentioned corresponding to the <br>shipping information available in the appendix.</strong></center>"
                         },
                         "alignment" : {
                           "type" : "constant",
                           "value" : "left"
-                        },
-                        "class" : {
-                          "type" : "constant",
-                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TextWidget"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
                         }
                       },
-                      "reference" : "15f062ff-fc0e-4e8e-8611-6377ab45088d",
+                      "reference" : "4a3de7de-e8f9-4982-a8b7-07c7f64962f8",
                       "hasValidationError" : false,
                       "id" : "pbText"
                     }
@@ -519,7 +511,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Pay"
+                    "value" : "Submit"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -565,32 +557,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable",
-                    "value" : ""
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable",
-                    "value" : ""
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "8f14015d-dc1f-45ba-ab26-e555d63a7739",
+                "reference" : "766706bf-8e11-4d2e-b517-bcb8023170c3",
                 "hasValidationError" : false,
                 "id" : "pbButton"
               }
@@ -650,7 +619,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "af025945-3d6e-4db7-a064-290f0518f13a",
+                "reference" : "72e034ed-f8ae-421d-97a9-8957d1593c4b",
                 "hasValidationError" : false,
                 "id" : "pbText"
               }
@@ -662,7 +631,7 @@
   ],
   "assets" : [
     {
-      "id" : "12772e64-ad6a-4e0d-aff2-52867f8e3258",
+      "id" : "18c4d228-bf37-437a-8657-dfa824249ad4",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -671,13 +640,6 @@
   ],
   "inactiveAssets" : [ ],
   "variables" : {
-    "_TicketOrder" : {
-      "type" : "url",
-      "value" : [
-        "../{{context._TicketOrder_ref.link}}"
-      ],
-      "exposed" : false
-    },
     "task" : {
       "type" : "url",
       "value" : [
@@ -703,11 +665,11 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data._TicketOrder ){",
+        "if( $data._TicketCard ){",
         "\treturn {",
-        "\t\t//map _TicketOrder variable to expected task contract input",
-        "\t\t_TicketOrderInput: {",
-        "\t\t\tFK_cardKey: $data._TicketOrder.FK_cardKey !== undefined ? $data._TicketOrder.FK_cardKey : null",
+        "\t\t//map _TicketCard variable to expected task contract input",
+        "\t\t_TicketCardInput: {",
+        "\t\t\tcardOwnerCity: $data._TicketCard.cardOwnerCity !== undefined ? $data._TicketCard.cardOwnerCity : null",
         "\t\t}",
         "\t}",
         "}"
@@ -727,10 +689,17 @@
         "id"
       ],
       "exposed" : false
+    },
+    "_TicketCard" : {
+      "type" : "url",
+      "value" : [
+        "../{{context._TicketCard_ref.link}}"
+      ],
+      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "85a81168-daa4-4057-a212-d4665319c393",
+  "uuid" : "df8061fe-e687-4a8f-b5b9-863659a946e6",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
