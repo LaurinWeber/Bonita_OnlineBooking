@@ -506,63 +506,63 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_MW1fgYu-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_MW1fgIu-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_MW1fgou-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_xAuh0J0HEeqA6opry-3e7A" name="Send notification" definitionId="email" event="ON_ENTER" definitionVersion="1.1.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_xAuh0Z0HEeqA6opry-3e7A" definitionId="email" version="1.1.0" modelVersion="7.10.0-001">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh0p0HEeqA6opry-3e7A" key="smtpHost">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh050HEeqA6opry-3e7A" name="localhost" content="localhost" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_-7aTAJ0SEeqA6opry-3e7A" documentation="smtp" name="Send notification" definitionId="email" event="ON_ENTER" throwErrorEvent="true" definitionVersion="1.1.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_-7aTAZ0SEeqA6opry-3e7A" definitionId="email" version="1.1.0" modelVersion="7.10.0-001">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTAp0SEeqA6opry-3e7A" key="smtpHost">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTA50SEeqA6opry-3e7A" name="smtp.mail.infomaniak.com" content="smtp.mail.infomaniak.com" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh1J0HEeqA6opry-3e7A" key="smtpPort">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh1Z0HEeqA6opry-3e7A" name="2525" content="2525" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTBJ0SEeqA6opry-3e7A" key="smtpPort">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTBZ0SEeqA6opry-3e7A" name="587" content="587" returnType="java.lang.Integer" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh1p0HEeqA6opry-3e7A" key="sslSupport">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh150HEeqA6opry-3e7A" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTBp0SEeqA6opry-3e7A" key="sslSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTB50SEeqA6opry-3e7A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh2J0HEeqA6opry-3e7A" key="starttlsSupport">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh2Z0HEeqA6opry-3e7A" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTCJ0SEeqA6opry-3e7A" key="starttlsSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTCZ0SEeqA6opry-3e7A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh2p0HEeqA6opry-3e7A" key="userName">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh250HEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTCp0SEeqA6opry-3e7A" key="userName">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTC50SEeqA6opry-3e7A" name="no-reply@raphaeldarbellay.ch" content="no-reply@raphaeldarbellay.ch" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh3J0HEeqA6opry-3e7A" key="password">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh3Z0HEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTDJ0SEeqA6opry-3e7A" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTDZ0SEeqA6opry-3e7A" name="BonitaPwd2020" content="BonitaPwd2020" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh3p0HEeqA6opry-3e7A" key="from">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh350HEeqA6opry-3e7A" name="no-reply@booking.com" content="no-reply@booking.com" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTDp0SEeqA6opry-3e7A" key="from">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTD50SEeqA6opry-3e7A" name="no-reply@darbellay-selection.com" content="no-reply@darbellay-selection.com" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh4J0HEeqA6opry-3e7A" key="returnPath">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh4Z0HEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTEJ0SEeqA6opry-3e7A" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTEZ0SEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh4p0HEeqA6opry-3e7A" key="to">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh450HEeqA6opry-3e7A" name="_TicketCard - TicketCard#getCardOwnerEmail" content="getCardOwnerEmail" type="TYPE_JAVA_METHOD_CALL" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_xAuh5J0HEeqA6opry-3e7A" name="_TicketCard" dataType="_fbBVlIuuEeqp8I9lzaJuNw" className="com.company.onlinebooking.TicketCard"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTEp0SEeqA6opry-3e7A" key="to">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTE50SEeqA6opry-3e7A" name="_TicketCard - TicketCard#getCardOwnerEmail" content="getCardOwnerEmail" type="TYPE_JAVA_METHOD_CALL" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_-7aTFJ0SEeqA6opry-3e7A" name="_TicketCard" dataType="_fbBVlIuuEeqp8I9lzaJuNw" className="com.company.onlinebooking.TicketCard"/>
                 </expression>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh5Z0HEeqA6opry-3e7A" key="bcc">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh5p0HEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTFZ0SEeqA6opry-3e7A" key="bcc">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTFp0SEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh550HEeqA6opry-3e7A" key="cc">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh6J0HEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTF50SEeqA6opry-3e7A" key="cc">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTGJ0SEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh6Z0HEeqA6opry-3e7A" key="subject">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh6p0HEeqA6opry-3e7A" name="Online Booking - Order in Process" content="Online Booking - Order in Process" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTGZ0SEeqA6opry-3e7A" key="subject">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTGp0SEeqA6opry-3e7A" name="Booking Online - Order in process" content="Booking Online - Order in process" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh650HEeqA6opry-3e7A" key="html">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh7J0HEeqA6opry-3e7A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTG50SEeqA6opry-3e7A" key="html">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTHJ0SEeqA6opry-3e7A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh7Z0HEeqA6opry-3e7A" key="message">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh7p0HEeqA6opry-3e7A" name="&lt;pattern-expression>" content="Dear customer,&#xD;&#xA;&#xD;&#xA;Your order is being processed!&#xD;&#xA;&#xD;&#xA;best regards&#xD;&#xA;Online Booking Team" type="TYPE_PATTERN" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTHZ0SEeqA6opry-3e7A" key="message">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTHp0SEeqA6opry-3e7A" name="&lt;pattern-expression>" content="Dear client,&#xD;&#xA;&#xD;&#xA;Your order is being processed.&#xD;&#xA;&#xD;&#xA;best regards&#xD;&#xA;Online Booking Team" type="TYPE_PATTERN" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh750HEeqA6opry-3e7A" key="headers">
-                <expression xmi:type="expression:TableExpression" xmi:id="_xAuh8J0HEeqA6opry-3e7A"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTH50SEeqA6opry-3e7A" key="headers">
+                <expression xmi:type="expression:TableExpression" xmi:id="_-7aTIJ0SEeqA6opry-3e7A"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh8Z0HEeqA6opry-3e7A" key="charset">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh8p0HEeqA6opry-3e7A" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTIZ0SEeqA6opry-3e7A" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTIp0SEeqA6opry-3e7A" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh850HEeqA6opry-3e7A" key="replyTo">
-                <expression xmi:type="expression:Expression" xmi:id="_xAuh9J0HEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTI50SEeqA6opry-3e7A" key="replyTo">
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTJJ0SEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xAuh9Z0HEeqA6opry-3e7A" key="attachments">
-                <expression xmi:type="expression:ListExpression" xmi:id="_xAuh9p0HEeqA6opry-3e7A"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTJZ0SEeqA6opry-3e7A" key="attachments">
+                <expression xmi:type="expression:ListExpression" xmi:id="_-7aTJp0SEeqA6opry-3e7A"/>
               </parameters>
             </configuration>
           </connectors>
