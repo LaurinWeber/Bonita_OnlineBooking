@@ -146,25 +146,25 @@
           <connectors xmi:type="process:Connector" xmi:id="_ZDEHcJ0KEeqA6opry-3e7A" name="Send confiramtion" definitionId="email" event="ON_ENTER" definitionVersion="1.1.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_ZDEHcZ0KEeqA6opry-3e7A" definitionId="email" version="1.1.0" modelVersion="7.10.0-001">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHcp0KEeqA6opry-3e7A" key="smtpHost">
-                <expression xmi:type="expression:Expression" xmi:id="_ZDEHc50KEeqA6opry-3e7A" name="localhost" content="localhost" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_ZDEHc50KEeqA6opry-3e7A" name="mail.infomaniak.com" content="mail.infomaniak.com" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHdJ0KEeqA6opry-3e7A" key="smtpPort">
-                <expression xmi:type="expression:Expression" xmi:id="_ZDEHdZ0KEeqA6opry-3e7A" name="2525" content="2525" returnType="java.lang.Integer" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_ZDEHdZ0KEeqA6opry-3e7A" name="587" content="587" returnType="java.lang.Integer" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHdp0KEeqA6opry-3e7A" key="sslSupport">
                 <expression xmi:type="expression:Expression" xmi:id="_ZDEHd50KEeqA6opry-3e7A" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHeJ0KEeqA6opry-3e7A" key="starttlsSupport">
-                <expression xmi:type="expression:Expression" xmi:id="_ZDEHeZ0KEeqA6opry-3e7A" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_ZDEHeZ0KEeqA6opry-3e7A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHep0KEeqA6opry-3e7A" key="userName">
-                <expression xmi:type="expression:Expression" xmi:id="_ZDEHe50KEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_ZDEHe50KEeqA6opry-3e7A" name="no-reply@raphaeldarbellay.ch" content="no-reply@raphaeldarbellay.ch" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHfJ0KEeqA6opry-3e7A" key="password">
-                <expression xmi:type="expression:Expression" xmi:id="_ZDEHfZ0KEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_ZDEHfZ0KEeqA6opry-3e7A" name="BonitaPwd2020" content="BonitaPwd2020" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHfp0KEeqA6opry-3e7A" key="from">
-                <expression xmi:type="expression:Expression" xmi:id="_ZDEHf50KEeqA6opry-3e7A" name="no-reply@booking.com" content="no-reply@booking.com" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_ZDEHf50KEeqA6opry-3e7A" name="mail.infomaniak.com" content="mail.infomaniak.com" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHgJ0KEeqA6opry-3e7A" key="returnPath">
                 <expression xmi:type="expression:Expression" xmi:id="_ZDEHgZ0KEeqA6opry-3e7A" content="" returnTypeFixed="true"/>
@@ -184,10 +184,12 @@
                 <expression xmi:type="expression:Expression" xmi:id="_ZDEHip0KEeqA6opry-3e7A" name="Online Booking - Order sent" content="Online Booking - Order sent" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHi50KEeqA6opry-3e7A" key="html">
-                <expression xmi:type="expression:Expression" xmi:id="_ZDEHjJ0KEeqA6opry-3e7A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_ZDEHjJ0KEeqA6opry-3e7A" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHjZ0KEeqA6opry-3e7A" key="message">
-                <expression xmi:type="expression:Expression" xmi:id="_ZDEHjp0KEeqA6opry-3e7A" name="&lt;pattern-expression>" content="Dear customer,&#xD;&#xA;&#xD;&#xA;Your ticket has been send by post.&#xD;&#xA;&#xD;&#xA;best regards&#xD;&#xA;Online Booking Team" type="TYPE_PATTERN" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_ZDEHjp0KEeqA6opry-3e7A" name="message()" content="String mail = &#x9;&quot;Dear &quot; + _TicketCard.getCardOwnerFirstName() +&quot;,\n\n&quot; +&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&quot;Your ticket has been sent by post today. \n\n&quot; +&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&quot;best regards \n&quot;+&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&quot;Online Booking Team&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_b6pGUJ5vEeq7WI7103BbTQ" name="_TicketCard" dataType="_fbBVlIuuEeqp8I9lzaJuNw" className="com.company.onlinebooking.TicketCard"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ZDEHj50KEeqA6opry-3e7A" key="headers">
                 <expression xmi:type="expression:TableExpression" xmi:id="_ZDEHkJ0KEeqA6opry-3e7A"/>
@@ -506,16 +508,16 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_MW1fgYu-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_MW1fgIu-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_MW1fgou-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_-7aTAJ0SEeqA6opry-3e7A" documentation="smtp" name="Send notification" definitionId="email" event="ON_ENTER" throwErrorEvent="true" definitionVersion="1.1.0">
+          <connectors xmi:type="process:Connector" xmi:id="_-7aTAJ0SEeqA6opry-3e7A" documentation="smtp" name="Send notification" definitionId="email" event="ON_ENTER" definitionVersion="1.1.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_-7aTAZ0SEeqA6opry-3e7A" definitionId="email" version="1.1.0" modelVersion="7.10.0-001">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTAp0SEeqA6opry-3e7A" key="smtpHost">
-                <expression xmi:type="expression:Expression" xmi:id="_-7aTA50SEeqA6opry-3e7A" name="smtp.mail.infomaniak.com" content="smtp.mail.infomaniak.com" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTA50SEeqA6opry-3e7A" name="mail.infomaniak.com" content="mail.infomaniak.com" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTBJ0SEeqA6opry-3e7A" key="smtpPort">
                 <expression xmi:type="expression:Expression" xmi:id="_-7aTBZ0SEeqA6opry-3e7A" name="587" content="587" returnType="java.lang.Integer" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTBp0SEeqA6opry-3e7A" key="sslSupport">
-                <expression xmi:type="expression:Expression" xmi:id="_-7aTB50SEeqA6opry-3e7A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTB50SEeqA6opry-3e7A" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTCJ0SEeqA6opry-3e7A" key="starttlsSupport">
                 <expression xmi:type="expression:Expression" xmi:id="_-7aTCZ0SEeqA6opry-3e7A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -547,10 +549,12 @@
                 <expression xmi:type="expression:Expression" xmi:id="_-7aTGp0SEeqA6opry-3e7A" name="Booking Online - Order in process" content="Booking Online - Order in process" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTG50SEeqA6opry-3e7A" key="html">
-                <expression xmi:type="expression:Expression" xmi:id="_-7aTHJ0SEeqA6opry-3e7A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTHJ0SEeqA6opry-3e7A" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTHZ0SEeqA6opry-3e7A" key="message">
-                <expression xmi:type="expression:Expression" xmi:id="_-7aTHp0SEeqA6opry-3e7A" name="&lt;pattern-expression>" content="Dear client,&#xD;&#xA;&#xD;&#xA;Your order is being processed.&#xD;&#xA;&#xD;&#xA;best regards&#xD;&#xA;Online Booking Team" type="TYPE_PATTERN" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_-7aTHp0SEeqA6opry-3e7A" name="message()" content="String mail = &#x9;&quot;Dear &quot; + _TicketCard.cardOwnerFirstName + &quot;, \n\n&quot; +&#xD;&#xA;&quot;Your order is being processed. \n\n&quot; +&#xD;&#xA;&quot;best regards \n&quot; +&#xD;&#xA;&quot;Online Booking Team&quot;&#xD;&#xA;&#xD;&#xA;return mail" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ZHh68J5uEeq7WI7103BbTQ" name="_TicketCard" dataType="_fbBVlIuuEeqp8I9lzaJuNw" className="com.company.onlinebooking.TicketCard"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-7aTH50SEeqA6opry-3e7A" key="headers">
                 <expression xmi:type="expression:TableExpression" xmi:id="_-7aTIJ0SEeqA6opry-3e7A"/>
