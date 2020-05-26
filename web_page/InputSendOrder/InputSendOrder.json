@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "InputSendOrder",
   "name" : "InputSendOrder",
-  "lastUpdate" : 1590435797451,
+  "lastUpdate" : 1590515884742,
   "rows" : [
     [
       {
@@ -154,54 +154,64 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12
+                  "xs" : 1
                 },
                 "propertyValues" : {
-                  "labelHidden" : {
+                  "cssClasses" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "level" : {
+                  "srcType" : {
                     "type" : "constant",
-                    "value" : "Level 4"
+                    "value" : "URL"
                   },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : "https://bonita.raphaeldarbellay.ch/favicon.ico"
+                  },
+                  "assetName" : {
+                    "type" : "constant"
+                  },
+                  "alt" : {
+                    "type" : "interpolation"
+                  }
+                },
+                "reference" : "596c9d92-13c2-48c0-a784-2ece8a4b6503",
+                "hasValidationError" : false,
+                "id" : "pbImage"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 11
+                },
+                "propertyValues" : {
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "widgetId" : {
-                    "type" : "constant",
-                    "value" : "pbTitle"
-                  },
-                  "readOnly" : {
+                  "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "label" : {
-                    "type" : "interpolation"
-                  },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "_Ticket Card"
+                    "value" : "SENDING CONFIRMATION"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 2"
                   },
                   "alignment" : {
                     "type" : "constant",
                     "value" : "left"
-                  },
-                  "class" : {
-                    "type" : "constant",
-                    "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
                   }
                 },
-                "reference" : "529d3740-f508-4688-8570-043db73a2fdc",
+                "reference" : "60895e61-610d-4d2d-b220-855fcfd05efc",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -289,7 +299,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Card Key"
+                          "value" : "KEYCARD:"
                         },
                         "text" : {
                           "type" : "interpolation",
@@ -306,6 +316,18 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "1174feab-52bf-4933-a175-bf69bd29286d",
@@ -346,7 +368,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Card Owner First Name"
+                          "value" : "FIRSTNAME:"
                         },
                         "text" : {
                           "type" : "interpolation",
@@ -363,6 +385,18 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "99a917e4-0b74-4314-af90-e7b1cf944da1",
@@ -403,7 +437,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Card Owner Last Name"
+                          "value" : "LASTNAME:"
                         },
                         "text" : {
                           "type" : "interpolation",
@@ -420,6 +454,18 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "1b6cf8e1-7277-4080-9274-1b95eba4605c",

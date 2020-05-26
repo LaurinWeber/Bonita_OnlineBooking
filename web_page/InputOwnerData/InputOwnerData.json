@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "InputOwnerData",
   "name" : "InputOwnerData",
-  "lastUpdate" : 1590102906200,
+  "lastUpdate" : 1590515737380,
   "rows" : [
     [
       {
@@ -154,54 +154,64 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12
+                  "xs" : 1
                 },
                 "propertyValues" : {
-                  "labelHidden" : {
+                  "cssClasses" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "level" : {
+                  "srcType" : {
                     "type" : "constant",
-                    "value" : "Level 4"
+                    "value" : "URL"
                   },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : "https://bonita.raphaeldarbellay.ch/favicon.ico"
+                  },
+                  "assetName" : {
+                    "type" : "constant"
+                  },
+                  "alt" : {
+                    "type" : "interpolation"
+                  }
+                },
+                "reference" : "5916c9c9-d3bc-48a1-8131-4f6dedc1f28e",
+                "hasValidationError" : false,
+                "id" : "pbImage"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 11
+                },
+                "propertyValues" : {
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "widgetId" : {
-                    "type" : "constant",
-                    "value" : "pbTitle"
-                  },
-                  "readOnly" : {
+                  "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "label" : {
-                    "type" : "interpolation"
-                  },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "_Ticket Card"
+                    "value" : "ENTER YOUR INFORMATION"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 2"
                   },
                   "alignment" : {
                     "type" : "constant",
                     "value" : "left"
-                  },
-                  "class" : {
-                    "type" : "constant",
-                    "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
                   }
                 },
-                "reference" : "db1652f4-5776-43a4-b0f8-d5b044164dc7",
+                "reference" : "9f14957c-b3e2-4d40-9305-e43d1bcd6af9",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -284,7 +294,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Card Owner First Name"
+                          "value" : "FIRSTNAME:"
                         },
                         "type" : {
                           "type" : "constant",
@@ -320,6 +330,24 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "_TicketCard.cardOwnerFirstName"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "9a357b7b-03c6-4baf-bc08-061950f113e5",
@@ -356,7 +384,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Card Owner Last Name"
+                          "value" : "LASTNAME:"
                         },
                         "type" : {
                           "type" : "constant",
@@ -392,6 +420,24 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "_TicketCard.cardOwnerLastName"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "8fc76354-981b-4724-abac-9102ced16da2",
@@ -428,7 +474,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Card Owner Street"
+                          "value" : "STREET:"
                         },
                         "type" : {
                           "type" : "constant",
@@ -464,6 +510,24 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "_TicketCard.cardOwnerStreet"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "3499f5dc-22f0-4edc-bd6f-3029502ef7c4",
@@ -500,7 +564,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Card Owner Zip Code"
+                          "value" : "ZIPCODE:"
                         },
                         "type" : {
                           "type" : "constant",
@@ -536,6 +600,24 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "_TicketCard.cardOwnerZipCode"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "f15a05c3-32be-401d-8284-57a1c17ff150",
@@ -572,7 +654,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Card Owner City"
+                          "value" : "CITY:"
                         },
                         "type" : {
                           "type" : "constant",
@@ -608,6 +690,24 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "_TicketCard.cardOwnerCity"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "46ded843-0d5c-4647-acbe-4545d56f423b",
@@ -644,7 +744,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Card Owner Email"
+                          "value" : "EMAIL:"
                         },
                         "type" : {
                           "type" : "constant",
@@ -680,6 +780,24 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "_TicketCard.cardOwnerEmail"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "bfeb2f62-bfc7-435d-a88b-d368493f2fc6",

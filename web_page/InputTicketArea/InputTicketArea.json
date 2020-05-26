@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "InputTicketArea",
   "name" : "InputTicketArea",
-  "lastUpdate" : 1589974462427,
+  "lastUpdate" : 1590515926165,
   "rows" : [
     [
       {
@@ -154,54 +154,64 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12
+                  "xs" : 1
                 },
                 "propertyValues" : {
-                  "labelHidden" : {
+                  "cssClasses" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "level" : {
+                  "srcType" : {
                     "type" : "constant",
-                    "value" : "Level 4"
+                    "value" : "URL"
                   },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : "https://bonita.raphaeldarbellay.ch/favicon.ico"
+                  },
+                  "assetName" : {
+                    "type" : "constant"
+                  },
+                  "alt" : {
+                    "type" : "interpolation"
+                  }
+                },
+                "reference" : "87935f17-a6ae-4e48-9592-09470656b9f9",
+                "hasValidationError" : false,
+                "id" : "pbImage"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 6
+                },
+                "propertyValues" : {
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "widgetId" : {
-                    "type" : "constant",
-                    "value" : "pbTitle"
-                  },
-                  "readOnly" : {
+                  "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "label" : {
-                    "type" : "interpolation"
-                  },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "_Ticket Order"
+                    "value" : "SELECT AREA"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 2"
                   },
                   "alignment" : {
                     "type" : "constant",
                     "value" : "left"
-                  },
-                  "class" : {
-                    "type" : "constant",
-                    "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
                   }
                 },
-                "reference" : "d534985b-d9a2-4afd-ad8a-4464142f54a1",
+                "reference" : "16354bde-01ff-49c4-bf48-009d81b7ad4a",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -285,7 +295,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Select"
+                          "value" : "AREA:"
                         },
                         "labelPosition" : {
                           "type" : "constant",

@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "InputForwardOrder",
   "name" : "InputForwardOrder",
-  "lastUpdate" : 1590436964702,
+  "lastUpdate" : 1590515292352,
   "rows" : [
     [
       {
@@ -120,6 +120,18 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "8ae01e69-5025-4b4f-964f-d6168853b7ce",
@@ -132,7 +144,7 @@
     ],
     [
       {
-        "type" : "component",
+        "type" : "container",
         "dimension" : {
           "xs" : 12
         },
@@ -145,38 +157,131 @@
             "type" : "constant",
             "value" : false
           },
-          "labelHidden" : {
-            "type" : "constant",
-            "value" : true
-          },
-          "label" : {
-            "type" : "interpolation",
-            "value" : "Default label"
-          },
-          "labelPosition" : {
-            "type" : "constant",
-            "value" : "top"
-          },
-          "labelWidth" : {
-            "type" : "constant",
-            "value" : 4
-          },
-          "allowHTML" : {
-            "type" : "constant",
-            "value" : true
-          },
-          "text" : {
-            "type" : "interpolation",
-            "value" : "<center> <b>I want to finish my order and forward to process</b></center>"
-          },
-          "alignment" : {
-            "type" : "constant",
-            "value" : "left"
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
           }
         },
-        "reference" : "1e368155-f04b-4091-8518-d03aa0a8fbd7",
+        "reference" : "dea433ef-a5ec-419b-b3b4-d95c5f41c037",
         "hasValidationError" : false,
-        "id" : "pbText"
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 1
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "srcType" : {
+                  "type" : "constant",
+                  "value" : "URL"
+                },
+                "url" : {
+                  "type" : "constant",
+                  "value" : "https://bonita.raphaeldarbellay.ch/favicon.ico"
+                },
+                "assetName" : {
+                  "type" : "constant"
+                },
+                "alt" : {
+                  "type" : "interpolation"
+                }
+              },
+              "reference" : "c5df33e2-61a0-43bb-af74-acacfdb397b8",
+              "hasValidationError" : false,
+              "id" : "pbImage"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 11
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "THANK YOU FOR YOUR PURCHASE !"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "537dec56-f695-4b9f-8cf5-881ed484ef09",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Default label"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<center> <b>YOU WILL BE NOTIFY BY EMAIL FOR THE NEXT TASK.</b></center>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "1e368155-f04b-4091-8518-d03aa0a8fbd7",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
       }
     ],
     [
@@ -231,7 +336,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Finish"
+                    "value" : "Continue"
                   },
                   "dataToSend" : {
                     "type" : "expression",

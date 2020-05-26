@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "InputNewCard",
   "name" : "InputNewCard",
-  "lastUpdate" : 1589477877186,
+  "lastUpdate" : 1590515424053,
   "rows" : [
     [
       {
@@ -154,6 +154,72 @@
               {
                 "type" : "component",
                 "dimension" : {
+                  "xs" : 1
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "srcType" : {
+                    "type" : "constant",
+                    "value" : "URL"
+                  },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : "https://bonita.raphaeldarbellay.ch/favicon.ico"
+                  },
+                  "assetName" : {
+                    "type" : "constant"
+                  },
+                  "alt" : {
+                    "type" : "interpolation"
+                  }
+                },
+                "reference" : "883833cd-4380-46ed-b847-78c7cadaa4a0",
+                "hasValidationError" : false,
+                "id" : "pbImage"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 8
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "NEED A NEW KEYCARD ?"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 2"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "a98cf650-4068-46ff-b5a1-e568f9dd7bd5",
+                "hasValidationError" : false,
+                "id" : "pbTitle"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
                   "xs" : 12
                 },
                 "propertyValues" : {
@@ -179,7 +245,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Tick for order a new card"
+                    "value" : "TICK ONLY TO ORDER A NEW KEYCARD"
                   },
                   "alignment" : {
                     "type" : "constant",

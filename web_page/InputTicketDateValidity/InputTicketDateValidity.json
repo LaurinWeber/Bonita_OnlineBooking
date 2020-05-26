@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "InputTicketDateValidity",
   "name" : "InputTicketDateValidity",
-  "lastUpdate" : 1589967425642,
+  "lastUpdate" : 1590514957422,
   "rows" : [
     [
       {
@@ -10,7 +10,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "4f673f1b-ee4b-4ad5-b20b-9553e7c6c403",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -28,54 +37,64 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12
+                  "xs" : 1
                 },
                 "propertyValues" : {
-                  "labelHidden" : {
+                  "cssClasses" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "level" : {
+                  "srcType" : {
                     "type" : "constant",
-                    "value" : "Level 4"
+                    "value" : "URL"
                   },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : "https://bonita.raphaeldarbellay.ch/favicon.ico"
+                  },
+                  "assetName" : {
+                    "type" : "constant"
+                  },
+                  "alt" : {
+                    "type" : "interpolation"
+                  }
+                },
+                "reference" : "d83cab34-6010-4eb2-b0f0-9b95f9bd1d99",
+                "hasValidationError" : false,
+                "id" : "pbImage"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 5
+                },
+                "propertyValues" : {
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "widgetId" : {
-                    "type" : "constant",
-                    "value" : "pbTitle"
-                  },
-                  "readOnly" : {
+                  "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "label" : {
-                    "type" : "interpolation"
-                  },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "_Ticket Order"
+                    "value" : "SELECT THE DATE"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 2"
                   },
                   "alignment" : {
                     "type" : "constant",
                     "value" : "left"
-                  },
-                  "class" : {
-                    "type" : "constant",
-                    "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
                   }
                 },
-                "reference" : "5d034162-a2df-4ea5-acb5-1fbae0fa8b64",
+                "reference" : "e8f89426-45b5-4afe-a352-4f2e5f586c92",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -162,7 +181,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ticket Date Validity"
+                          "value" : "DATE:"
                         },
                         "type" : {
                           "type" : "constant"
@@ -354,6 +373,14 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
                 "reference" : "3f3b05cd-364b-4d06-b5ac-a4a00e3f58a9",

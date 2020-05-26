@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "InputCardKey",
   "name" : "InputCardKey",
-  "lastUpdate" : 1589478666678,
+  "lastUpdate" : 1590515085535,
   "rows" : [
     [
       {
@@ -136,7 +136,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "70b49455-9fd6-4d53-91bf-19024d0c75a1",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -154,54 +163,64 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12
+                  "xs" : 1
                 },
                 "propertyValues" : {
-                  "labelHidden" : {
+                  "cssClasses" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "level" : {
+                  "srcType" : {
                     "type" : "constant",
-                    "value" : "Level 4"
+                    "value" : "URL"
                   },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : "https://bonita.raphaeldarbellay.ch/favicon.ico"
+                  },
+                  "assetName" : {
+                    "type" : "constant"
+                  },
+                  "alt" : {
+                    "type" : "interpolation"
+                  }
+                },
+                "reference" : "f8cbc866-5c4d-4703-be29-2bd7d3d948b8",
+                "hasValidationError" : false,
+                "id" : "pbImage"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 11
+                },
+                "propertyValues" : {
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "widgetId" : {
-                    "type" : "constant",
-                    "value" : "pbTitle"
-                  },
-                  "readOnly" : {
+                  "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "label" : {
-                    "type" : "interpolation"
-                  },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "_Ticket Card"
+                    "value" : "ENTER THE KEYCARD"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 2"
                   },
                   "alignment" : {
                     "type" : "constant",
                     "value" : "left"
-                  },
-                  "class" : {
-                    "type" : "constant",
-                    "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
                   }
                 },
-                "reference" : "87e788eb-835b-4b31-81bc-b7abd4c77074",
+                "reference" : "09cebe40-d632-4347-9aad-9cc1a4b1b57c",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -284,7 +303,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Card Key"
+                          "value" : "KEY (MAX 32 LENGTH):"
                         },
                         "type" : {
                           "type" : "constant",
@@ -320,6 +339,24 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "formInput._TicketCardInput.cardKey"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "3506f430-58b1-45ea-896d-f35063fab204",
@@ -408,6 +445,29 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "33614e08-203d-4b23-9626-4b4ea8768dfe",

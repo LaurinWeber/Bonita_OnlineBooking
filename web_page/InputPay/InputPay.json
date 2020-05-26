@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "InputPay",
   "name" : "InputPay",
-  "lastUpdate" : 1590096628921,
+  "lastUpdate" : 1590515693618,
   "rows" : [
     [
       {
@@ -154,54 +154,64 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12
+                  "xs" : 1
                 },
                 "propertyValues" : {
-                  "labelHidden" : {
+                  "cssClasses" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "level" : {
+                  "srcType" : {
                     "type" : "constant",
-                    "value" : "Level 4"
+                    "value" : "URL"
                   },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : "https://bonita.raphaeldarbellay.ch/favicon.ico"
+                  },
+                  "assetName" : {
+                    "type" : "constant"
+                  },
+                  "alt" : {
+                    "type" : "interpolation"
+                  }
+                },
+                "reference" : "b7dbad65-5f1c-4ef7-9493-ef239f5135dd",
+                "hasValidationError" : false,
+                "id" : "pbImage"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 11
+                },
+                "propertyValues" : {
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "widgetId" : {
-                    "type" : "constant",
-                    "value" : "pbTitle"
-                  },
-                  "readOnly" : {
+                  "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "label" : {
-                    "type" : "interpolation"
-                  },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "_Ticket Order"
+                    "value" : "CLICK TO PAY"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 2"
                   },
                   "alignment" : {
                     "type" : "constant",
                     "value" : "left"
-                  },
-                  "class" : {
-                    "type" : "constant",
-                    "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
                   }
                 },
-                "reference" : "4f9b1673-e2c9-448e-b3dc-2de6b61fa7b3",
+                "reference" : "1eea4437-a38c-43c4-bb36-017fc115891c",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
               }
@@ -289,7 +299,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ticket Area"
+                          "value" : "AREA:"
                         },
                         "text" : {
                           "type" : "interpolation",
@@ -306,6 +316,18 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "71bbb2ae-3518-4277-805d-6a5313d2265d",
@@ -346,7 +368,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ticket Price"
+                          "value" : "PRICE:"
                         },
                         "text" : {
                           "type" : "interpolation",
@@ -363,6 +385,18 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "6c4f54e0-adf4-464d-93a8-ad1fa1285b76",
@@ -403,7 +437,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ticket Date Validity"
+                          "value" : "DATE:"
                         },
                         "text" : {
                           "type" : "interpolation",
@@ -420,6 +454,18 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "f16e3799-e78d-4187-b65f-057829c9a03b",
@@ -460,7 +506,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ticket Status"
+                          "value" : "STATUS:"
                         },
                         "text" : {
                           "type" : "interpolation",
@@ -477,6 +523,18 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "15f062ff-fc0e-4e8e-8611-6377ab45088d",
