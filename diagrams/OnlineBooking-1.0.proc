@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_fbBVYIuuEeqp8I9lzaJuNw" name="OnlineBooking" author="Admin" bonitaVersion="7.10.4" bonitaModelVersion="7.10.0-001" configId="ACED0005740010372E31302E302D303031372E31302E34">
     <elements xmi:type="process:Pool" xmi:id="_fbBVYYuuEeqp8I9lzaJuNw" name="OnlineBooking">
-      <elements xmi:type="process:Lane" xmi:id="_51d5QIvBEeqp8I9lzaJuNw" name="Administration lane" actor="_fbBVe4uuEeqp8I9lzaJuNw">
+      <elements xmi:type="process:Lane" xmi:id="_51d5QIvBEeqp8I9lzaJuNw" name="Administration lane" actor="_dxylgKAtEeqXVPXb_Jzg2A">
         <elements xmi:type="process:TextAnnotation" xmi:id="_lJ3FgIvEEeqp8I9lzaJuNw" text="TIMER&#xD;&#xA;&#xD;&#xA;Everyday at 16:00 the administration prepare the keycard, print delivery sheet, prepares the envelop and and sends them by post to the customer.&#xD;&#xA;"/>
         <elements xmi:type="process:Task" xmi:id="_UV2XIJqpEeqB6MRVKI-hHQ" name="Send order" outgoing="__AT2oJ6-EeqnF8EpUeja6A" incoming="_G5RTwJ67EeqnF8EpUeja6A" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_fGPdkovBEeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
@@ -24,7 +24,7 @@
           <completionCondition xmi:type="expression:Expression" xmi:id="_fGPdl4vBEeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <BoundaryIntermediateEvents xmi:type="process:BoundaryTimerEvent" xmi:id="_9Ha_MJ66EeqnF8EpUeja6A" name="Check sending" outgoing="_89iGkJ6-EeqnF8EpUeja6A">
             <textAnnotationAttachment xmi:type="process:TextAnnotationAttachment" xmi:id="_lJ3Fh4vEEeqp8I9lzaJuNw" source="_lJ3FgIvEEeqp8I9lzaJuNw"/>
-            <condition xmi:type="expression:Expression" xmi:id="__Je9kJ66EeqnF8EpUeja6A" name="DateTime16pmEveryDay()" content="Calendar calendar = GregorianCalendar.getInstance();&#xD;&#xA;calendar.set(Calendar.SECOND, 0);&#xD;&#xA;calendar.set(Calendar.MINUTE, 0);&#xD;&#xA;calendar.set(Calendar.HOUR_OF_DAY, 16);&#xD;&#xA;calendar.getTime();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.Date"/>
+            <condition xmi:type="expression:Expression" xmi:id="__Je9kJ66EeqnF8EpUeja6A" name="DateTime16pmEveryDay()" content="/*Calendar calendar = GregorianCalendar.getInstance();&#xD;&#xA;calendar.set(Calendar.SECOND, 0);&#xD;&#xA;calendar.set(Calendar.MINUTE, 0);&#xD;&#xA;calendar.set(Calendar.HOUR_OF_DAY, 16);&#xD;&#xA;calendar.getTime();*/" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.Date"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_UV4zaZqpEeqB6MRVKI-hHQ">
             <targetForm xmi:type="expression:Expression" xmi:id="_UsShgJu3EeqdiO64ymg54Q" name="InputSendOrder" content="df8061fe-e687-4a8f-b5b9-863659a946e6" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -107,8 +107,18 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_JViRt4u-Eeqp8I9lzaJuNw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_JViRtou-Eeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_rO27sKA6EeqXVPXb_Jzg2A" documentation="Assign automatically (does not make sense to assign automatically.. better to have a pool of todos everyone can access..)" name="Employee who sends order" definitionId="user-manager" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_rO27saA6EeqXVPXb_Jzg2A" definitionId="user-manager" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_rO27sqA6EeqXVPXb_Jzg2A" key="userId">
+              <expression xmi:type="expression:Expression" xmi:id="_rO27s6A6EeqXVPXb_Jzg2A" name="userId()" content="&#xD;&#xA;import org.bonitasoft.engine.api.IdentityAPI&#xD;&#xA;import org.bonitasoft.engine.bpm.flownode.ArchivedHumanTaskInstance&#xD;&#xA;import org.bonitasoft.engine.bpm.flownode.ArchivedHumanTaskInstanceSearchDescriptor&#xD;&#xA;import org.bonitasoft.engine.identity.User&#xD;&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xD;&#xA;import org.bonitasoft.engine.search.SearchResult&#xD;&#xA;import org.codehaus.groovy.ast.stmt.ContinueStatement&#xD;&#xA;import org.codehaus.groovy.ast.stmt.SwitchStatement&#xD;&#xA;&#xD;&#xA;def taskName = 'Prepare order'&#xD;&#xA;&#xD;&#xA;//get list of pending tasks (orders) 100 orders max..&#xD;&#xA;final SearchOptionsBuilder searchOptionsBuilder = new SearchOptionsBuilder(0, 100)&#xD;&#xA;.filter(ArchivedHumanTaskInstanceSearchDescriptor.PARENT_PROCESS_INSTANCE_ID, processInstanceId)&#xD;&#xA;.filter(ArchivedHumanTaskInstanceSearchDescriptor.NAME, taskName).filter(ArchivedHumanTaskInstanceSearchDescriptor.TERMINAL, true)&#xD;&#xA;SearchResult&lt;ArchivedHumanTaskInstance> searchResult = apiAccessor.processAPI.searchArchivedHumanTasks(searchOptionsBuilder.done())&#xD;&#xA;&#xD;&#xA;final List&lt;ArchivedHumanTaskInstance> tasks = searchResult.result&#xD;&#xA;&#xD;&#xA;//define group (Administration)&#xD;&#xA;//Group group = apiAccessor.identityAPI.getGroupByPath('/acme/production/services');&#xD;&#xA;&#xD;&#xA;//get list of users from the Administration&#xD;&#xA;final IdentityAPI identityAPI = TenantAPIAccessor.getIdentityAPI(apiSession);&#xD;&#xA;final SearchOptionsBuilder builder = new SearchOptionsBuilder(0, 100);&#xD;&#xA;builder.filter(UserSearchDescriptor.GROUP_ID, groupID);&#xD;&#xA;final SearchResult&lt;User> users = identityAPI(apiSession).searchUsers(builder.done());&#xD;&#xA;&#xD;&#xA;//get list of logged users and assign&#xD;&#xA;ArrayList&lt;User> loggedUsers = new ArrayList();&#xD;&#xA;for(User user: users.getResult()){&#xD;&#xA;&#x9;if(null != apiAccessor.identityAPI.getUser(user.id)){&#xD;&#xA;&#x9;&#x9;loggedUsers = apiAccessor.identityAPI.getUser(user.id);&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;System.out.println(user.getFirstName()+&quot; &quot; + user.getLastName());&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;int i = 0;&#xD;&#xA;//always assign a task to user, loop trough until no tasks left (one at a time)&#xD;&#xA;for (ArchivedHumanTaskInstance task in tasks ) {&#xD;&#xA;&#x9;processAPI.assignUserTask(task.getId(), loggedUsers.get(i).getId());&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;i++;&#xD;&#xA;&#x9;if(loggedUsers.get(i) == null){&#xD;&#xA;&#x9;&#x9;i=0;&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                <referencedElements xmi:type="expression:Expression" xmi:id="_QjKbgKBCEeqXVPXb_Jzg2A" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                <referencedElements xmi:type="expression:Expression" xmi:id="_QjKbgaBCEeqXVPXb_Jzg2A" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+              </expression>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
-      <elements xmi:type="process:Lane" xmi:id="_fbBVYouuEeqp8I9lzaJuNw" name="SalesManager lane" actor="_fbBVe4uuEeqp8I9lzaJuNw">
+      <elements xmi:type="process:Lane" xmi:id="_fbBVYouuEeqp8I9lzaJuNw" name="SalesManager lane" actor="_jEqNUKAtEeqXVPXb_Jzg2A">
         <elements xmi:type="process:ServiceTask" xmi:id="_xb2xsIu7Eeqp8I9lzaJuNw" name="Check payment" outgoing="_92BMUIu7Eeqp8I9lzaJuNw" incoming="_UUxjoJqqEeqB6MRVKI-hHQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_xb3YwYu7Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_xb3YwIu7Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
@@ -607,7 +617,7 @@
           <completionCondition xmi:type="expression:Expression" xmi:id="_MW1fhou-Eeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
       </elements>
-      <elements xmi:type="process:Lane" xmi:id="_qIDf0IuuEeqp8I9lzaJuNw" name="Customer lane" actor="_fbBVe4uuEeqp8I9lzaJuNw">
+      <elements xmi:type="process:Lane" xmi:id="_qIDf0IuuEeqp8I9lzaJuNw" name="Customer lane" actor="_Y3rb8KAtEeqXVPXb_Jzg2A">
         <elements xmi:type="process:StartEvent" xmi:id="_uLECQIuuEeqp8I9lzaJuNw" name="Select day" outgoing="_v9fooJ7HEeqnF8EpUeja6A">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_uLECQouuEeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_uLECQYuuEeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
@@ -1483,6 +1493,13 @@
           <contract xmi:type="process:Contract" xmi:id="_Y-r82Z7CEeqnF8EpUeja6A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_Y-r83J7CEeqnF8EpUeja6A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_UfpVoKA2EeqXVPXb_Jzg2A" name="Customer who buys liftticket" definitionId="initiator" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_UfpVoaA2EeqXVPXb_Jzg2A" definitionId="initiator" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_UfpVoqA2EeqXVPXb_Jzg2A" key="autoAssign">
+              <expression xmi:type="expression:Expression" xmi:id="_UfpVo6A2EeqXVPXb_Jzg2A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
       <data xmi:type="process:Data" xmi:id="_a0eBkJXhEeqRHM5g8bbpFA" name="_isDayAvailable" dataType="_fbBVjIuuEeqp8I9lzaJuNw">
         <defaultValue xmi:type="expression:Expression" xmi:id="_a0eBkZXhEeqRHM5g8bbpFA" name="false" content="false" returnType="java.lang.Boolean"/>
@@ -1735,6 +1752,9 @@
         <condition xmi:type="expression:Expression" xmi:id="_v9foop7HEeqnF8EpUeja6A" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_fbBVe4uuEeqp8I9lzaJuNw" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_Y3rb8KAtEeqXVPXb_Jzg2A" name="Customer actor"/>
+      <actors xmi:type="process:Actor" xmi:id="_dxylgKAtEeqXVPXb_Jzg2A" name="Administration actor"/>
+      <actors xmi:type="process:Actor" xmi:id="_jEqNUKAtEeqXVPXb_Jzg2A" name="Manager actor"/>
       <contract xmi:type="process:Contract" xmi:id="_fbBVfIuuEeqp8I9lzaJuNw">
         <inputs xmi:type="process:ContractInput" xmi:id="_--8H8Jp8EeqB6MRVKI-hHQ" name="_TicketOrderInput" type="COMPLEX" dataReference="_TicketOrder">
           <inputs xmi:type="process:ContractInput" xmi:id="_--8H8Zp8EeqB6MRVKI-hHQ" name="TicketDateValidity" type="LOCALDATE"/>
