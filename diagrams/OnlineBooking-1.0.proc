@@ -24,7 +24,7 @@
           <completionCondition xmi:type="expression:Expression" xmi:id="_fGPdl4vBEeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <BoundaryIntermediateEvents xmi:type="process:BoundaryTimerEvent" xmi:id="_9Ha_MJ66EeqnF8EpUeja6A" name="Check sending" outgoing="_89iGkJ6-EeqnF8EpUeja6A">
             <textAnnotationAttachment xmi:type="process:TextAnnotationAttachment" xmi:id="_lJ3Fh4vEEeqp8I9lzaJuNw" source="_lJ3FgIvEEeqp8I9lzaJuNw"/>
-            <condition xmi:type="expression:Expression" xmi:id="__Je9kJ66EeqnF8EpUeja6A" name="DateTime16pmEveryDay()" content="/*Calendar calendar = GregorianCalendar.getInstance();&#xD;&#xA;calendar.set(Calendar.SECOND, 0);&#xD;&#xA;calendar.set(Calendar.MINUTE, 0);&#xD;&#xA;calendar.set(Calendar.HOUR_OF_DAY, 16);&#xD;&#xA;calendar.getTime();*/" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.Date"/>
+            <condition xmi:type="expression:Expression" xmi:id="__Je9kJ66EeqnF8EpUeja6A" name="DateTime16pmEveryDay()" content="Calendar calendar = GregorianCalendar.getInstance();&#xD;&#xA; calendar.set(Calendar.SECOND, 0);&#xD;&#xA; calendar.set(Calendar.MINUTE, 0);&#xD;&#xA; calendar.set(Calendar.HOUR_OF_DAY, 16);&#xD;&#xA; calendar.getTime();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.Date"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_UV4zaZqpEeqB6MRVKI-hHQ">
             <targetForm xmi:type="expression:Expression" xmi:id="_UsShgJu3EeqdiO64ymg54Q" name="InputSendOrder" content="df8061fe-e687-4a8f-b5b9-863659a946e6" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -55,6 +55,30 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_UIIfWIvDEeqp8I9lzaJuNw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_UIIfV4vDEeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
+        <elements xmi:type="process:XORGateway" xmi:id="__pNCoJ6-EeqnF8EpUeja6A" name="Merge" outgoing="_CbaEgJ6_EeqnF8EpUeja6A" incoming="_94LJ4J6-EeqnF8EpUeja6A __AT2oJ6-EeqnF8EpUeja6A">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_94IGkZ6-EeqnF8EpUeja6A" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_94IGkJ6-EeqnF8EpUeja6A" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_94IGkp6-EeqnF8EpUeja6A" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ServiceTask" xmi:id="_QLxdEJ6_EeqnF8EpUeja6A" name="Prepare order" outgoing="_G5RTwJ67EeqnF8EpUeja6A" incoming="_0tULkJ64EeqnF8EpUeja6A">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_JViRsYu-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_JViRsIu-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_JViRsou-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_V9DtMJu0EeqdiO64ymg54Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_V9DtMZu0EeqdiO64ymg54Q" name="addressDocument" content="addressDocument" type="DOCUMENT_REF_TYPE">
+              <referencedElements xmi:type="process:Document" xmi:id="_W4ezoJu0EeqdiO64ymg54Q" name="addressDocument"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_V9DtMpu0EeqdiO64ymg54Q" name="generateAdressPrintable()" content="import org.bonitasoft.engine.bpm.document.DocumentValue&#xD;&#xA;import com.company.onlinebooking.TicketCard;&#xD;&#xA;&#xD;&#xA;String s = _TicketCard.getCardOwnerFirstName() +&quot; &quot;+ _TicketCard.getCardOwnerLastName() +&quot;\n&quot;;&#xD;&#xA;s += _TicketCard.getCardOwnerStreet() + &quot;\n&quot;;&#xD;&#xA;s += _TicketCard.getCardOwnerZipCode() +&quot; &quot;+ _TicketCard.getCardOwnerCity()&#xD;&#xA;&#xD;&#xA;byte[] array = s.getBytes();&#xD;&#xA;DocumentValue doc = new DocumentValue(array, &quot;text/plain&quot;, &quot;address.txt&quot;);&#xD;&#xA;return doc;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_bnAGUJu2EeqdiO64ymg54Q" name="_TicketCard" dataType="_fbBVlIuuEeqp8I9lzaJuNw" className="com.company.onlinebooking.TicketCard"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_V9DtM5u0EeqdiO64ymg54Q" type="DOCUMENT_CREATE_UPDATE"/>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_JViRs4u-Eeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_JViRtIu-Eeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_JViRtYu-Eeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_JViRt4u-Eeqp8I9lzaJuNw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_JViRtou-Eeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        </elements>
         <elements xmi:type="process:Task" xmi:id="_2mTewJ6-EeqnF8EpUeja6A" name="Express sending" outgoing="_94LJ4J6-EeqnF8EpUeja6A" incoming="_89iGkJ6-EeqnF8EpUeja6A" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_2mTewZ6-EeqnF8EpUeja6A" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_2mTewp6-EeqnF8EpUeja6A" name="" content="" returnTypeFixed="true"/>
@@ -83,36 +107,11 @@
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_2mTe1Z6-EeqnF8EpUeja6A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:XORGateway" xmi:id="__pNCoJ6-EeqnF8EpUeja6A" name="Merge" outgoing="_CbaEgJ6_EeqnF8EpUeja6A" incoming="_94LJ4J6-EeqnF8EpUeja6A __AT2oJ6-EeqnF8EpUeja6A">
-          <dynamicLabel xmi:type="expression:Expression" xmi:id="_94IGkZ6-EeqnF8EpUeja6A" name="" content="" returnTypeFixed="true"/>
-          <dynamicDescription xmi:type="expression:Expression" xmi:id="_94IGkJ6-EeqnF8EpUeja6A" name="" content="" returnTypeFixed="true"/>
-          <stepSummary xmi:type="expression:Expression" xmi:id="_94IGkp6-EeqnF8EpUeja6A" name="" content="" returnTypeFixed="true"/>
-        </elements>
-        <elements xmi:type="process:ServiceTask" xmi:id="_QLxdEJ6_EeqnF8EpUeja6A" name="Prepare order" outgoing="_G5RTwJ67EeqnF8EpUeja6A" incoming="_0tULkJ64EeqnF8EpUeja6A">
-          <dynamicLabel xmi:type="expression:Expression" xmi:id="_JViRsYu-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
-          <dynamicDescription xmi:type="expression:Expression" xmi:id="_JViRsIu-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
-          <stepSummary xmi:type="expression:Expression" xmi:id="_JViRsou-Eeqp8I9lzaJuNw" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_V9DtMJu0EeqdiO64ymg54Q">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_V9DtMZu0EeqdiO64ymg54Q" name="addressDocument" content="addressDocument" type="DOCUMENT_REF_TYPE">
-              <referencedElements xmi:type="process:Document" xmi:id="_W4ezoJu0EeqdiO64ymg54Q" name="addressDocument"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_V9DtMpu0EeqdiO64ymg54Q" name="generateAdressPrintable()" content="import org.bonitasoft.engine.bpm.document.DocumentValue&#xD;&#xA;import com.company.onlinebooking.TicketCard;&#xD;&#xA;&#xD;&#xA;String s = _TicketCard.getCardOwnerFirstName() +&quot; &quot;+ _TicketCard.getCardOwnerLastName() +&quot;\n&quot;;&#xD;&#xA;s += _TicketCard.getCardOwnerStreet() + &quot;\n&quot;;&#xD;&#xA;s += _TicketCard.getCardOwnerZipCode() +&quot; &quot;+ _TicketCard.getCardOwnerCity()&#xD;&#xA;&#xD;&#xA;byte[] array = s.getBytes();&#xD;&#xA;DocumentValue doc = new DocumentValue(array, &quot;text/plain&quot;, &quot;address.txt&quot;);&#xD;&#xA;return doc;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_bnAGUJu2EeqdiO64ymg54Q" name="_TicketCard" dataType="_fbBVlIuuEeqp8I9lzaJuNw" className="com.company.onlinebooking.TicketCard"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_V9DtM5u0EeqdiO64ymg54Q" type="DOCUMENT_CREATE_UPDATE"/>
-          </operations>
-          <loopCondition xmi:type="expression:Expression" xmi:id="_JViRs4u-Eeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          <loopMaximum xmi:type="expression:Expression" xmi:id="_JViRtIu-Eeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_JViRtYu-Eeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <iteratorExpression xmi:type="expression:Expression" xmi:id="_JViRt4u-Eeqp8I9lzaJuNw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
-          <completionCondition xmi:type="expression:Expression" xmi:id="_JViRtou-Eeqp8I9lzaJuNw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-        </elements>
-        <filters xmi:type="process:ActorFilter" xmi:id="_rO27sKA6EeqXVPXb_Jzg2A" documentation="Assign automatically (does not make sense to assign automatically.. better to have a pool of todos everyone can access..)" name="Employee who sends order" definitionId="user-manager" definitionVersion="1.0.0">
-          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_rO27saA6EeqXVPXb_Jzg2A" definitionId="user-manager" version="1.0.0">
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_rO27sqA6EeqXVPXb_Jzg2A" key="userId">
-              <expression xmi:type="expression:Expression" xmi:id="_rO27s6A6EeqXVPXb_Jzg2A" name="userId()" content="&#xD;&#xA;import org.bonitasoft.engine.api.IdentityAPI&#xD;&#xA;import org.bonitasoft.engine.bpm.flownode.ArchivedHumanTaskInstance&#xD;&#xA;import org.bonitasoft.engine.bpm.flownode.ArchivedHumanTaskInstanceSearchDescriptor&#xD;&#xA;import org.bonitasoft.engine.identity.User&#xD;&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xD;&#xA;import org.bonitasoft.engine.search.SearchResult&#xD;&#xA;import org.codehaus.groovy.ast.stmt.ContinueStatement&#xD;&#xA;import org.codehaus.groovy.ast.stmt.SwitchStatement&#xD;&#xA;&#xD;&#xA;def taskName = 'Prepare order'&#xD;&#xA;&#xD;&#xA;//get list of pending tasks (orders) 100 orders max..&#xD;&#xA;final SearchOptionsBuilder searchOptionsBuilder = new SearchOptionsBuilder(0, 100)&#xD;&#xA;.filter(ArchivedHumanTaskInstanceSearchDescriptor.PARENT_PROCESS_INSTANCE_ID, processInstanceId)&#xD;&#xA;.filter(ArchivedHumanTaskInstanceSearchDescriptor.NAME, taskName).filter(ArchivedHumanTaskInstanceSearchDescriptor.TERMINAL, true)&#xD;&#xA;SearchResult&lt;ArchivedHumanTaskInstance> searchResult = apiAccessor.processAPI.searchArchivedHumanTasks(searchOptionsBuilder.done())&#xD;&#xA;&#xD;&#xA;final List&lt;ArchivedHumanTaskInstance> tasks = searchResult.result&#xD;&#xA;&#xD;&#xA;//define group (Administration)&#xD;&#xA;//Group group = apiAccessor.identityAPI.getGroupByPath('/acme/production/services');&#xD;&#xA;&#xD;&#xA;//get list of users from the Administration&#xD;&#xA;final IdentityAPI identityAPI = TenantAPIAccessor.getIdentityAPI(apiSession);&#xD;&#xA;final SearchOptionsBuilder builder = new SearchOptionsBuilder(0, 100);&#xD;&#xA;builder.filter(UserSearchDescriptor.GROUP_ID, groupID);&#xD;&#xA;final SearchResult&lt;User> users = identityAPI(apiSession).searchUsers(builder.done());&#xD;&#xA;&#xD;&#xA;//get list of logged users and assign&#xD;&#xA;ArrayList&lt;User> loggedUsers = new ArrayList();&#xD;&#xA;for(User user: users.getResult()){&#xD;&#xA;&#x9;if(null != apiAccessor.identityAPI.getUser(user.id)){&#xD;&#xA;&#x9;&#x9;loggedUsers = apiAccessor.identityAPI.getUser(user.id);&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;System.out.println(user.getFirstName()+&quot; &quot; + user.getLastName());&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;int i = 0;&#xD;&#xA;//always assign a task to user, loop trough until no tasks left (one at a time)&#xD;&#xA;for (ArchivedHumanTaskInstance task in tasks ) {&#xD;&#xA;&#x9;processAPI.assignUserTask(task.getId(), loggedUsers.get(i).getId());&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;i++;&#xD;&#xA;&#x9;if(loggedUsers.get(i) == null){&#xD;&#xA;&#x9;&#x9;i=0;&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                <referencedElements xmi:type="expression:Expression" xmi:id="_QjKbgKBCEeqXVPXb_Jzg2A" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-                <referencedElements xmi:type="expression:Expression" xmi:id="_QjKbgaBCEeqXVPXb_Jzg2A" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+        <filters xmi:type="process:ActorFilter" xmi:id="_NAK8IKHSEeqaB6jQE3wnXw" name="Send order" definitionId="single-user" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_NAK8IaHSEeqaB6jQE3wnXw" definitionId="single-user" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_NAK8IqHSEeqaB6jQE3wnXw" key="userId">
+              <expression xmi:type="expression:Expression" xmi:id="_NAK8I6HSEeqaB6jQE3wnXw" name="userId()" content="import org.bonitasoft.engine.api.IdentityAPI&#xD;&#xA;import org.bonitasoft.engine.identity.User&#xD;&#xA;&#xD;&#xA;String username;&#xD;&#xA;int day;&#xD;&#xA;&#xD;&#xA;Calendar calendar = Calendar.getInstance();&#xD;&#xA;day = calendar.get(Calendar.DAY_OF_WEEK);&#xD;&#xA;&#xD;&#xA; switch(day){&#xD;&#xA;&#x9;case Calendar.MONDAY: &#xD;&#xA;&#x9;&#x9;username =  &quot;anthony.nichols&quot;&#xD;&#xA;&#x9;&#x9; break;&#xD;&#xA;&#x9; case Calendar.TUESDAY: &#xD;&#xA;&#x9;&#x9;username =  &quot;april.sanchez&quot;;&#xD;&#xA;&#x9;&#x9; break;&#xD;&#xA;&#x9; case Calendar.WEDNESDAY:&#xD;&#xA;&#x9;&#x9; username =  &quot;daniela.angelo&quot;;&#xD;&#xA;&#x9;&#x9; break;&#xD;&#xA;&#x9; case Calendar.THURSDAY:&#xD;&#xA;&#x9;&#x9; username =  &quot;flavio.riviera&quot;;&#xD;&#xA;&#x9;&#x9; break;&#xD;&#xA;&#x9;case Calendar.FRIDAY:&#xD;&#xA;&#x9;&#x9; username =  &quot;giovanna.almeida&quot;;&#xD;&#xA;&#x9;&#x9; break;&#xD;&#xA;&#x9; default:&#xD;&#xA;&#x9;&#x9; username =  &quot;anthony.nichols&quot;;&#xD;&#xA;&#x9;&#x9; break;&#xD;&#xA; }&#xD;&#xA; &#xD;&#xA; IdentityAPI identity = apiAccessor.getIdentityAPI();&#xD;&#xA; User user = identity.getUserByUserName(username);&#xD;&#xA; &#xD;&#xA; return user.getId();&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                <referencedElements xmi:type="expression:Expression" xmi:id="_layQ4KHSEeqaB6jQE3wnXw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
               </expression>
             </parameters>
           </configuration>
@@ -1725,7 +1724,7 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_94LJ4J6-EeqnF8EpUeja6A" target="__pNCoJ6-EeqnF8EpUeja6A" source="_2mTewJ6-EeqnF8EpUeja6A">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_94LJ4Z6-EeqnF8EpUeja6A"/>
-        <condition xmi:type="expression:Expression" xmi:id="_94LJ4p6-EeqnF8EpUeja6A" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_94LJ4p6-EeqnF8EpUeja6A" name="" content="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="__AT2oJ6-EeqnF8EpUeja6A" target="__pNCoJ6-EeqnF8EpUeja6A" source="_UV2XIJqpEeqB6MRVKI-hHQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="__AT2oZ6-EeqnF8EpUeja6A"/>
@@ -1751,8 +1750,7 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_v9fooZ7HEeqnF8EpUeja6A"/>
         <condition xmi:type="expression:Expression" xmi:id="_v9foop7HEeqnF8EpUeja6A" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <actors xmi:type="process:Actor" xmi:id="_fbBVe4uuEeqp8I9lzaJuNw" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
-      <actors xmi:type="process:Actor" xmi:id="_Y3rb8KAtEeqXVPXb_Jzg2A" name="Customer actor"/>
+      <actors xmi:type="process:Actor" xmi:id="_Y3rb8KAtEeqXVPXb_Jzg2A" name="Customer actor" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_dxylgKAtEeqXVPXb_Jzg2A" name="Administration actor"/>
       <actors xmi:type="process:Actor" xmi:id="_jEqNUKAtEeqXVPXb_Jzg2A" name="Manager actor"/>
       <contract xmi:type="process:Contract" xmi:id="_fbBVfIuuEeqp8I9lzaJuNw">
@@ -2008,10 +2006,6 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_zKZcCpuyEeqdiO64ymg54Q" type="5017"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zKZcCZuyEeqdiO64ymg54Q" x="3136" y="45" width="100" height="50"/>
             </children>
-            <children xmi:type="notation:Shape" xmi:id="_2mTe1p6-EeqnF8EpUeja6A" type="3005" element="_2mTewJ6-EeqnF8EpUeja6A" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
-              <children xmi:type="notation:DecorationNode" xmi:id="_2mTe156-EeqnF8EpUeja6A" type="5005" element="_2mTewJ6-EeqnF8EpUeja6A"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2mTe3J6-EeqnF8EpUeja6A" x="3513" y="168" width="100" height="50"/>
-            </children>
             <children xmi:type="notation:Shape" xmi:id="__pNps56-EeqnF8EpUeja6A" type="3008" element="__pNCoJ6-EeqnF8EpUeja6A" fontName="Segoe UI">
               <children xmi:type="notation:DecorationNode" xmi:id="__pNptZ6-EeqnF8EpUeja6A" type="5026">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="__pOQwJ6-EeqnF8EpUeja6A" x="35" y="-53"/>
@@ -2022,19 +2016,23 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_QLyEIp6_EeqnF8EpUeja6A" type="5017"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QLyEIZ6_EeqnF8EpUeja6A" x="3308" y="45" width="100" height="49"/>
             </children>
+            <children xmi:type="notation:Shape" xmi:id="_2mTe1p6-EeqnF8EpUeja6A" type="3005" element="_2mTewJ6-EeqnF8EpUeja6A" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_2mTe156-EeqnF8EpUeja6A" type="5005" element="_2mTewJ6-EeqnF8EpUeja6A"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2mTe3J6-EeqnF8EpUeja6A" x="3635" y="211" width="100" height="50"/>
+            </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_51d5QovBEeqp8I9lzaJuNw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_51d5Q4vBEeqp8I9lzaJuNw" fontName="Segoe UI"/>
           <styles xmi:type="notation:LineStyle" xmi:id="_51d5RIvBEeqp8I9lzaJuNw"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_51d5SIvBEeqp8I9lzaJuNw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_51d5RYvBEeqp8I9lzaJuNw" x="53" y="10" width="6179" height="282"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_51d5RYvBEeqp8I9lzaJuNw" x="53" y="10" width="6179" height="320"/>
         </children>
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_fbBVqIuuEeqp8I9lzaJuNw"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_fbBVqYuuEeqp8I9lzaJuNw" fontName="Segoe UI"/>
       <styles xmi:type="notation:LineStyle" xmi:id="_fbBVqouuEeqp8I9lzaJuNw"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_fbBVq4uuEeqp8I9lzaJuNw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fbBVrIuuEeqp8I9lzaJuNw" width="6207" height="361"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fbBVrIuuEeqp8I9lzaJuNw" width="4721" height="361"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_fbBVrYuuEeqp8I9lzaJuNw"/>
     <edges xmi:type="notation:Connector" xmi:id="_aOmvU4u4Eeqp8I9lzaJuNw" type="4001" element="_aOmvUIu4Eeqp8I9lzaJuNw" source="_SRBEuZXfEeqRHM5g8bbpFA" target="_3GqQmZX8EeqRHM5g8bbpFA" roundedBendpointsRadius="10" routing="Rectilinear">
@@ -2291,7 +2289,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_UUyKtJqqEeqB6MRVKI-hHQ" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_UUyKsZqqEeqB6MRVKI-hHQ" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UUyKspqqEeqB6MRVKI-hHQ" points="[50, 22, -74, 455]$[94, 22, -30, 455]$[94, -414, -30, 19]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UUyKspqqEeqB6MRVKI-hHQ" points="[50, 20, -74, 325]$[88, 20, -36, 325]$[88, -286, -36, 19]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UUyxwJqqEeqB6MRVKI-hHQ" id="(0.5,0.06)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UUyxwZqqEeqB6MRVKI-hHQ" id="(0.84,0.62)"/>
     </edges>
@@ -2326,7 +2324,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_89itpJ6-EeqnF8EpUeja6A" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_89itoZ6-EeqnF8EpUeja6A" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_89itop6-EeqnF8EpUeja6A" points="[-13, 0, -1, -81]$[-13, 56, -1, -25]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_89itop6-EeqnF8EpUeja6A" points="[-15, 0, -125, -124]$[-15, 122, -125, -2]$[60, 122, -50, -2]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_89j7wJ6-EeqnF8EpUeja6A" id="(1.0,1.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_94LJ456-EeqnF8EpUeja6A" type="4001" element="_94LJ4J6-EeqnF8EpUeja6A" source="_2mTe1p6-EeqnF8EpUeja6A" target="__pNps56-EeqnF8EpUeja6A" roundedBendpointsRadius="10" routing="Rectilinear">
@@ -2334,7 +2332,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_94LJ556-EeqnF8EpUeja6A" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_94LJ5J6-EeqnF8EpUeja6A" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_94LJ5Z6-EeqnF8EpUeja6A" points="[50, -21, -172, 103]$[222, -21, 0, 103]$[222, -102, 0, 22]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_94LJ5Z6-EeqnF8EpUeja6A" points="[50, -2, -50, 165]$[97, -2, -3, 165]$[97, -149, -3, 18]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="__AUdsJ6-EeqnF8EpUeja6A" type="4001" element="__AT2oJ6-EeqnF8EpUeja6A" source="_UV4zbJqpEeqB6MRVKI-hHQ" target="__pNps56-EeqnF8EpUeja6A" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="__AUds56-EeqnF8EpUeja6A" type="6001">
